@@ -27,7 +27,7 @@ select  * from flight where dep_time="2022-09-01 02-02-02";
 
 
 1) boarding details
-select f_id,count(c_id) from ticket group by f_id;
+select * from flight;
 
 2)customer ticket
 select c.c_id as customerID,c.name as customerName,t.t_id as ticketID,t.f_id as flightID ,f.cost as cost,f.from_location fromLocation,f.to_location as toLocation,f.dep_time as departureTime,f.arr_time as arrivingTime from customer c,ticket t,flight f where c.c_id=t.c_id and t.f_id=f.f_id;
